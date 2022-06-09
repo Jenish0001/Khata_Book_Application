@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.Home_Fragment">
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#3F51B5">
+
+        <RelativeLayout
+            android:id="@+id/rv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/book_img"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/book"
+                app:tint="@color/white"
+
+                />
+
+            <TextView
+
+                android:id="@+id/name_binss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_toEndOf="@id/book_img"
+
+                android:text="name"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/name_binss"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                app:tint="@color/white"
+
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp">
+
+            <ImageView
+
+                android:id="@+id/rupees_img"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginRight="15dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/rupees"
+                app:tint="@color/white"
+
+                />
+
+
+            <ImageView
+
+                android:id="@+id/calender_img"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_toEndOf="@id/rupees_img"
+                android:scaleType="centerCrop"
+
+                android:src="@drawable/calendar"
+                app:tint="@color/white"
+
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relative1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="900dp">
+
+            <RelativeLayout
+                android:id="@+id/relative5_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:background="#3F51B5">
+
+                </FrameLayout>
+
+                <ScrollView
+                    android:id="@+id/scroller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:id="@+id/relative7_home"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="110dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:layout_marginBottom="15dp"
+                                android:backgroundTint="@color/white"
+                                app:cardCornerRadius="10dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <RelativeLayout
+                                        android:id="@+id/relative_home_3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="66dp">
+
+                                        <RelativeLayout
+                                            android:id="@+id/relative_home_1"
+                                            android:layout_width="196dp"
+                                            android:layout_height="65dp"
+
+                                            >
+
+                                            <TextView
+                                                android:id="@+id/txt1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerHorizontal="true"
+                                                android:layout_marginTop="15dp"
+                                                android:text="100"
+                                                android:textColor="#12751F"
+                                                android:textSize="20dp" />
+
+                                            <TextView
+                                                android:id="@+id/txt2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@id/txt1"
+                                                android:layout_centerHorizontal="true"
+                                                android:text="You Will give"
+                                                android:textColor="@color/black"
+                                                android:textSize="10dp"
+
+                                                />
+
+
+                                        </RelativeLayout>
+
+                                        <View
+                                            android:id="@+id/view_home_1"
+                                            android:layout_width="1dp"
+                                            android:layout_height="50dp"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toEndOf="@id/relative_home_1"
+                                            android:background="@color/black" />
+
+                                        <RelativeLayout
+                                            android:id="@+id/relative_home_2"
+                                            android:layout_width="196dp"
+                                            android:layout_height="65dp"
+                                            android:layout_toEndOf="@id/view_home_1"
+
+                                            >
+
+                                            <TextView
+                                                android:id="@+id/txt3"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerHorizontal="true"
+                                                android:layout_marginTop="15dp"
+                                                android:text="100"
+                                                android:textColor="#E3091C"
+                                                android:textSize="20dp" />
+
+                                            <TextView
+                                                android:id="@+id/txt4"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@id/txt3"
+                                                android:layout_centerHorizontal="true"
+                                                android:text="You Will give"
+                                                android:textColor="@color/black"
+                                                android:textSize="10dp"
+
+                                                />
+
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_below="@id/relative_home_1">
+
+                                            <View
+                                                android:id="@+id/voew_home_2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="1dp"
+                                                android:background="#515050" />
+
+
+                                        </RelativeLayout>
+
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/relative6_view"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_below="@id/relative_home_3">
+
+                                        <TextView
+                                            android:id="@+id/view_report_txt_home"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:text="View Report"
+                                            android:textColor="#0D2E6E"
+                                            android:textSize="15dp" />
+
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+
+                            android:id="@+id/relative4_home"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/relative7_home">
+
+                            <RelativeLayout
+                                android:id="@+id/relative1_home"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="5dp">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_centerVertical="true">
+
+                                    <ImageView
+
+                                        android:layout_width="270dp"
+                                        android:layout_height="40dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:src="@drawable/recleview"
+                                        app:tint="#5A5959"
+
+                                        />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
+
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent">
+
+                                            <ImageView
+                                                android:layout_width="20dp"
+                                                android:layout_height="20dp"
+                                                android:layout_gravity="center|left"
+                                                android:layout_marginLeft="30dp"
+                                                android:src="@drawable/search"
+                                                app:tint="#5A5959" />
+
+                                            <EditText
+
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_gravity="right"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginRight="20dp"
+                                                android:background="@null"
+                                                android:hint="Search  Customer "
+                                                android:textSize="15dp" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:gravity="center|right">
+
+                                            <ImageView
+                                                android:id="@+id/filterHome"
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:layout_marginRight="15dp"
+                                                android:src="@drawable/filter" />
+
+                                            <ImageView
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:layout_marginRight="15dp"
+                                                android:src="@drawable/pdf" />
+
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                </FrameLayout>
+
+
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/relative1_home">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recycle_view_home"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </ScrollView>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/cv_add_customer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp">
+
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="190dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:backgroundTint="#E91E63"
+                app:cardCornerRadius="10dp"
+
+                >
+
+                <RelativeLayout
+
+                    android:id="@+id/ADD_CUSTOMER_BTN"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/sharepeople_icon_home"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/shareicon"
+                        app:tint="@color/white"
+
+                        />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toEndOf="@id/sharepeople_icon_home"
+                        android:text="ADD CUSTOMER"
+                        android:textColor="@color/white"
+
+                        />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
