@@ -5,8 +5,9 @@ class ModelData(
     val name: String,
     val mobile: String,
     val ruppes: String,
-    val type: String
-//    val expence: String
+    val type: String,
+    val time: String,
+    val date: String
 )
 {
 

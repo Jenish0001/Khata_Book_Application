@@ -1,17 +1,18 @@
 package com.example.khata_book_application.View
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.RadioButton
-import android.widget.RadioGroup
-import android.widget.RelativeLayout
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.example.khata_book_application.DB_Helper
+import com.example.khata_book_application.Fragment.Home_Fragment
 import com.example.khata_book_application.Fragment.ModelData
 import com.example.khata_book_application.R
 import com.google.android.material.textfield.TextInputEditText
+import java.text.SimpleDateFormat
+import java.util.*
 
 class New_Contect_Activity : AppCompatActivity() {
 
@@ -26,6 +27,7 @@ class New_Contect_Activity : AppCompatActivity() {
     lateinit var redioGup1: RadioGroup
     lateinit var rdBtn1: RadioButton
     lateinit var rdBtn2: RadioButton
+    lateinit var ArrowNewContectActivity: ImageView
 
 
     var list = arrayListOf<ModelData>()
@@ -35,6 +37,10 @@ class New_Contect_Activity : AppCompatActivity() {
         setContentView(R.layout.new_contect_activity)
 
         blinding()
+
+        ArrowNewContectActivity.setOnClickListener {
+            finish()
+        }
 
         rv_3_AddNewCustomer.setOnClickListener {
 
@@ -46,37 +52,49 @@ class New_Contect_Activity : AppCompatActivity() {
 
 
         var db = DB_Helper(this)
-
 //        list = db.readData()
 //        setUpRv(list)
 
         Continue_item_btn.setOnClickListener {
 
             if (redioGup1.getCheckedRadioButtonId() == R.id.rdBtn1) {
-                stats = "Income"
+                stats = "0"
 
             } else {
-                stats = "Expense"
+                stats = "1"
             }
+            var c = Calendar.getInstance()
+            var simple = SimpleDateFormat("dd/MM/yyyy")
+            var datecurrent = simple.format(c.time).toString()
+
+            var calendar = Calendar.getInstance()
+            var simpleDateFormat = SimpleDateFormat("KK:mm aaa ")
+            var dateTime = simpleDateFormat.format(calendar.time).toString()
+
 
             db.insertData(
+
                 edit_name_data.text.toString(),
                 edit_mobile_data.text.toString(),
                 edit_ruppes.text.toString(),
-                stats
+                stats,dateTime,datecurrent
+
             )
 
-//            val intent = Intent(this, Add_Custmer_Data::class.java)
+//            var intent = Intent(this, Add_Custmer_Data::class.java)
 //            intent.putExtra("name", edit_name_data.text.toString())
+//            intent.putExtra("mobile", edit_mobile_data.text.toString())
 //            startActivity(intent)
 
 
 //            val intent = Intent(this, Home_Fragment::class.java)
 //            intent.putExtra("name", edit_name_data.text.toString())
+//            intent.putExtra("mobile", edit_mobile_data.text.toString())
 //            startActivity(intent)
 
             finish()
             rv4.isVisible = false
+
 
 //            list = db.readData()
 //            setUpRv(list)
@@ -98,6 +116,7 @@ class New_Contect_Activity : AppCompatActivity() {
         redioGup1 = findViewById<RadioGroup>(R.id.redioGup1)
         rdBtn1 = findViewById<RadioButton>(R.id.rdBtn1)
         rdBtn2 = findViewById<RadioButton>(R.id.rdBtn2)
+        ArrowNewContectActivity = findViewById<ImageView>(R.id.ArrowNewContectActivity)
 
     }
 

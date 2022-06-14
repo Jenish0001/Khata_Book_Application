@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,14 +13,18 @@
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize">
 
-        <ImageView
-            android:id="@+id/ArrowNewContectActivity"
+        <RelativeLayout
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/leftarrow" />
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp">
 
+            <ImageView
+                android:id="@+id/ArrowNewContectActivity"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/leftarrow" />
+        </RelativeLayout>
 
     </RelativeLayout>
 
@@ -98,19 +102,14 @@
         android:background="#8F8C8C" />
 
 
-
-
-
-
-
     <!--    visible Data -->
     <RelativeLayout
         android:id="@+id/rv4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/rv_3_AddNewCustomer"
-        android:padding="10dp"
         android:layout_marginTop="20dp"
+        android:padding="10dp"
         android:visibility="gone">
 
 
@@ -124,9 +123,9 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edit_name"
-                android:textSize="15dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textSize="15dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -136,15 +135,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/edit_name_data"
-            android:hint="mobile"
-            >
+            android:hint="mobile">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edit_mobile"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:inputType="number"
-                android:textSize="15dp"
-                android:layout_height="wrap_content" />
+                android:textSize="15dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -154,43 +152,41 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/edit_mobile_data"
-            android:hint="Rupees"
-            >
+            android:hint="Rupees">
 
 
             <com.google.android.material.textfield.TextInputEditText
 
                 android:id="@+id/edit_ruppes"
-                android:inputType="number"
                 android:layout_width="match_parent"
-                android:textSize="15dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="15dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <RadioGroup
             android:id="@+id/redioGup1"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/edit_ruppes_data"
             android:layout_width="wrap_content"
-            android:orientation="horizontal"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_ruppes_data"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
             <RadioButton
                 android:id="@+id/rdBtn1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
                 android:text="Income"
-                />
+                android:textSize="15dp" />
 
             <RadioButton
-                android:layout_marginLeft="20dp"
                 android:id="@+id/rdBtn2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
+                android:layout_marginLeft="20dp"
                 android:text="Expence"
-                />
+                android:textSize="15dp" />
         </RadioGroup>
 
         <Button

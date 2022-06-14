@@ -35,7 +35,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_toEndOf="@id/book_img"
-
                 android:text="name"
                 android:textColor="@color/white"
                 android:textSize="15dp" />
@@ -140,6 +139,7 @@
                                 app:cardCornerRadius="10dp">
 
                                 <RelativeLayout
+
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent">
 
@@ -156,7 +156,7 @@
                                             >
 
                                             <TextView
-                                                android:id="@+id/txt1"
+                                                android:id="@+id/txt1Income"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_centerHorizontal="true"
@@ -169,7 +169,7 @@
                                                 android:id="@+id/txt2"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
-                                                android:layout_below="@id/txt1"
+                                                android:layout_below="@id/txt1Income"
                                                 android:layout_centerHorizontal="true"
                                                 android:text="You Will give"
                                                 android:textColor="@color/black"
@@ -197,7 +197,7 @@
                                             >
 
                                             <TextView
-                                                android:id="@+id/txt3"
+                                                android:id="@+id/txt3Expence"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_centerHorizontal="true"
@@ -206,11 +206,12 @@
                                                 android:textColor="#E3091C"
                                                 android:textSize="20dp" />
 
+
                                             <TextView
                                                 android:id="@+id/txt4"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
-                                                android:layout_below="@id/txt3"
+                                                android:layout_below="@id/txt3Expence"
                                                 android:layout_centerHorizontal="true"
                                                 android:text="You Will give"
                                                 android:textColor="@color/black"
@@ -262,6 +263,13 @@
 
                         </RelativeLayout>
 
+                        <RelativeLayout
+                            android:id="@+id/relative_Txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/relative7_home">
+
+                        </RelativeLayout>
 
                         <RelativeLayout
 
@@ -335,6 +343,7 @@
                                                 android:src="@drawable/filter" />
 
                                             <ImageView
+
                                                 android:layout_width="30dp"
                                                 android:layout_height="30dp"
                                                 android:layout_marginRight="15dp"
@@ -348,11 +357,103 @@
 
                             </RelativeLayout>
 
+                            <RelativeLayout
+                                android:id="@+id/recycleTitle"
+                                android:layout_width="match_parent"
+                                android:layout_below="@id/relative1_home"
+                                android:layout_height="40dp">
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="10dp">
+
+                                        <TextView
+                                            android:id="@+id/entry_txt"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Entry"
+                                            android:textColor="#000000"
+                                            android:textSize="14dp" />
+
+
+                                        <TextView
+                                            android:id="@+id/total_txt"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/entry_txt"
+                                            android:textColor="#686868"
+                                            android:textSize="14.7dp" />
+
+                                    </RelativeLayout>
+
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginTop="10dp">
+
+                                        <TextView
+                                            android:id="@+id/OUT"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="sans-serif-medium"
+                                            android:gravity="end"
+                                            android:text="EXPENCE"
+                                            android:textColor="@color/red" />
+
+<!--                                        <TextView-->
+<!--                                            android:id="@+id/total_expense"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:layout_below="@id/OUT"-->
+<!--                                            android:gravity="end"-->
+<!--                                            android:textColor="#929292"-->
+<!--                                            android:textSize="14.7dp" />-->
+
+                                        <TextView
+                                            android:id="@+id/IN"
+                                            android:layout_width="70dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_toEndOf="@+id/OUT"
+                                            android:layout_marginRight="15dp"
+                                            android:fontFamily="sans-serif-medium"
+                                            android:gravity="end"
+                                            android:text="INCOME"
+                                            android:textColor="@color/green" />
+
+<!--                                        <TextView-->
+<!--                                            android:id="@+id/total_income"-->
+<!--                                            android:layout_width="70dp"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:layout_below="@id/IN"-->
+<!--                                            android:layout_marginStart="100dp"-->
+<!--                                            android:gravity="end"-->
+<!--                                            android:textColor="#929292"-->
+<!--                                            android:textSize="14.7dp" />-->
+
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+
+<!--// Recycle View-->
 
                             <RelativeLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@+id/relative1_home">
+                                android:layout_below="@+id/recycleTitle">
 
                                 <androidx.recyclerview.widget.RecyclerView
                                     android:id="@+id/recycle_view_home"
@@ -361,7 +462,11 @@
 
                                     />
                             </RelativeLayout>
+
+
+
                         </RelativeLayout>
+
                     </RelativeLayout>
 
                 </ScrollView>

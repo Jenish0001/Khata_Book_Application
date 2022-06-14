@@ -1,7 +1,6 @@
 package com.example.khata_book_application.Controller
 
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,8 +11,10 @@ import com.example.khata_book_application.Fragment.ModelData
 import com.example.khata_book_application.R
 import com.example.khata_book_application.View.Add_Custmer_Data
 import com.example.khata_book_application.View.MainActivity
+import com.example.khata_book_application.View.Money_Show_Activity
 
 class New_Contect_Adpter(
+
     val newContectActivity: MainActivity,
     val l1: ArrayList<ModelData>
 ) :
@@ -27,40 +28,42 @@ class New_Contect_Adpter(
         return New_Contect_Adpter.ViewData(view)
     }
 
-    override fun onBindViewHolder(holder: New_Contect_Adpter.ViewData, position: Int) {
+    override fun onBindViewHolder(holder: New_Contect_Adpter.ViewData,position: Int)
+    {
 
         holder.txt_id.text = l1[position].id
         holder.txt_name.text = l1[position].name
         holder.txt_moblie.text = l1[position].mobile
-//        holder.incomeTxtItem.text = l1[position]
 
-//        holder.incomeTxtItem.text=l1[position].income
-        if (l1[position].type.equals("Income"))
-        {
-
+        if (l1[position].type.equals("0")) {
             holder.txtRuppesExport.text = l1[position].ruppes
-
-//            Log.e("TAG", "onBindViewHolder: "+holder.txt_id+""+holder.txt_name+""+holder.txt_moblie+""+holder.txtRuppesExport)
-        }
-        else
-        {
-                    holder.incomeTxtItem.text=l1[position].ruppes
-
-//            Log.e("TAG", "onBindViewHolder: "+holder.txt_id+""+holder.txt_name+""+holder.txt_moblie+""+holder.incomeTxtItem)
+        } else {
+            holder.incomeTxtItem.text = l1[position].ruppes
         }
 
+
+        holder.time_txt.text =  l1[position].time
+        holder.date_txt.text =  l1[position].date
         holder.rv_view.setOnClickListener {
 
             val intent = Intent(newContectActivity, Add_Custmer_Data::class.java)
+            intent.putExtra("ps",position)
             intent.putExtra("name", l1[position].name)
+            intent.putExtra("mobile", l1[position].mobile)
+            intent.putExtra("id", l1[position].id)
+            intent.putExtra("ruppes", l1[position].ruppes)
+            intent.putExtra("type", l1[position].type)
+            intent.putExtra("time", l1[position].time)
+            intent.putExtra("date", l1[position].date)
+
             newContectActivity.startActivity(intent)
+
 
         }
 
     }
 
     override fun getItemCount(): Int {
-
         return l1.size
     }
 
@@ -72,11 +75,9 @@ class New_Contect_Adpter(
         var txt_moblie = itemView.findViewById<TextView>(R.id.txt_moblie)
         var txtRuppesExport = itemView.findViewById<TextView>(R.id.txtRuppesExport)
         var rv_view = itemView.findViewById<RelativeLayout>(R.id.rv_view)
-
-        //        var edit_data_add = itemView.findViewById<ImageView>(R.id.edit_data_add)
-//        var edit_data_delet = itemView.findViewById<ImageView>(R.id.edit_data_delet)
         var incomeTxtItem = itemView.findViewById<TextView>(R.id.incomeTxtItem)
-
+        var time_txt = itemView.findViewById<TextView>(R.id.time_txt)
+        var date_txt = itemView.findViewById<TextView>(R.id.date_txt)
     }
 
 }
